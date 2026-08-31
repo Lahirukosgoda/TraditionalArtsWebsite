@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVIGATION BAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 80px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #555;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* --- SEARCH BAR --- */
+.search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    border-radius: 20px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.search-container:hover, .search-container:focus-within {
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.search-input {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px 0 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-container:hover .search-input, .search-container:focus-within .search-input {
+    opacity: 1;
+}
+
+.search-btn {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+    color: #000;
+}
+
+/* --- HERO HEADING --- */
+.logo-container {
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-traditional {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.text-arts-today {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.text-arts {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 3px;
+    margin-right: 12px;
+}
+
+.text-today {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.text-creating-connections {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- SWIPER SLIDER --- */
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 20px;
+}
+
+.card-list .card-item {
+    background: #fff;
+    width: 320px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-list .card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-list .card-item .user-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-list .card-item .user-name {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-list .card-item .message-button {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    color: #fff;
+    background: #111;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+.card-list .card-item a {
+    text-decoration: none;
+}
+
+/* Swiper Controls */
+.slider-wrapper .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+.slider-wrapper .swiper-pagination-bullet-active {
+    background: #111;
+}
+
+.slider-wrapper .swiper-button-next,
+.slider-wrapper .swiper-button-prev {
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.slider-wrapper .swiper-button-next:hover,
+.slider-wrapper .swiper-button-prev:hover {
+    color: #555;
+}
+
+/* --- ARTIST PAGE CARDS (.main and .cards) - MASONRY LAYOUT --- */
+.main {
+    padding: 110px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 30px;
+}
+
+.cards {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Varying heights for masonry effect */
+    display: block;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+    padding: 20px 15px 10px;
+}
+
+.title h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.description {
+    text-align: center;
+    padding: 0 20px 25px;
+}
+
+.description button {
+    margin-top: 15px;
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #111;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.description button:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .main { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+    .main { column-count: 1; }
+}
