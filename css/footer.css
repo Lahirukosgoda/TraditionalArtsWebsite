@@ -1,0 +1,59 @@
+
+/* --- FOOTER --- */
+footer {
+    width: 100%;
+    background-color: #111;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: auto; /* Pushes footer to the bottom if container is flex */
+}
+
+footer .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+footer .socialIcons a {
+    color: #111;
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+footer .socialIcons a:hover {
+    background: #555;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+footer .contact-info p {
+    color: #aaa;
+}
+
+footer .contact-info a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .contact-info a:hover {
+    color: #fff;
+}
